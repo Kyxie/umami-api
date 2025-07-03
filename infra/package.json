@@ -24,6 +24,7 @@
     "@aws-cdk/aws-lambda-nodejs": "^1.203.0",
     "aws-cdk-lib": "2.202.0",
     "constructs": "^10.4.2",
+    "dotenv": "^17.0.1",
     "esbuild": "^0.25.5"
   }
 }

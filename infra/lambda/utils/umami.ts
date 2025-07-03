@@ -1,5 +1,5 @@
 import * as dotenv from 'dotenv';
-import { config } from '../config/config'; 
+import { config } from '../config/config';
 
 dotenv.config();
 

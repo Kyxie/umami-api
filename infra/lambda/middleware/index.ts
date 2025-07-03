@@ -5,7 +5,7 @@ import { config } from '../config/config';
 export function refererGuard(req: Request, res: Response, next: NextFunction) {
   const referer = req.get('referer') || '';
   const allowed = config.allowedReferers;
-  if (!allowed.some(origin => referer.startsWith(origin))) {
+  if (!allowed.some((origin) => referer.startsWith(origin))) {
     res.status(403).json({ error: 'Forbidden: Invalid referer' });
     return;
   }
@@ -15,5 +15,5 @@ export function refererGuard(req: Request, res: Response, next: NextFunction) {
 export const umamiRateLimit = rateLimit({
   windowMs: config.rateLimit.windowMs,
   max: config.rateLimit.max,
-  message: { error: 'Too many requests, please slow down.' }
+  message: { error: 'Too many requests, please slow down.' },
 });

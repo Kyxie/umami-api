@@ -1,7 +1,6 @@
 import js from '@eslint/js';
 import parser from '@typescript-eslint/parser';
 import plugin from '@typescript-eslint/eslint-plugin';
-import prettier from 'eslint-config-prettier';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 
 export default [
@@ -11,7 +10,6 @@ export default [
     languageOptions: {
       parser,
       parserOptions: {
-        project: './tsconfig.json',
         sourceType: 'module',
       },
       globals: {
@@ -32,5 +30,4 @@ export default [
       // 'no-console': 'warn',
     },
   },
-  prettier,
 ];

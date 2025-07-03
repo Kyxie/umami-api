@@ -15,13 +15,11 @@ export class InfraStack extends cdk.Stack {
     const visitorFunction = new NodejsFunction(this, 'VisitorLambda', {
       entry: path.join(__dirname, '../lambda/handler.ts'),
       runtime: lambda.Runtime.NODEJS_18_X,
-      bundling: {
-        externalModules: ['@vendia/serverless-express'],
-      },
       environment: {
         NODE_ENV: process.env.NODE_ENV || 'production',
         UMAMI_WEBSITE_ID: process.env.UMAMI_WEBSITE_ID || '',
         UMAMI_USER_TOKEN: process.env.UMAMI_USER_TOKEN || '',
+        TRACKING_ENDPOINT: process.env.TRACKING_ENDPOINT || 'http://localhost',
       },
     });
 
@@ -31,7 +29,7 @@ export class InfraStack extends cdk.Stack {
       proxy: true,
       defaultCorsPreflightOptions: {
         allowOrigins: allowedOrigins,
-         allowMethods: ['GET'],
+        allowMethods: ['GET'],
       },
     });
 

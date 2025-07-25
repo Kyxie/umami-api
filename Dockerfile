@@ -1,22 +1,22 @@
-FROM node:18-alpine AS builder
+# -------- Build Stage --------
+FROM golang:1.24-alpine AS builder
 
 WORKDIR /app
 
-RUN npm install -g pnpm
-
-COPY package.json ./
-COPY pnpm-lock.yaml ./
-
-RUN pnpm install --prod
+COPY go.mod go.sum ./
+RUN go mod download
 
 COPY . .
 
-FROM node:18-alpine
+RUN CGO_ENABLED=0 GOOS=linux go build -o umami-api
+
+# -------- Runtime Stage --------
+FROM alpine:latest
 
 WORKDIR /app
 
-COPY --from=builder /app .
+COPY --from=builder /app/umami-api .
 
 EXPOSE 3001
 
-CMD ["node", "index.js"]
+CMD ["./umami-api"]

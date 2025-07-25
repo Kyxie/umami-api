@@ -17,7 +17,8 @@ Insert this code on your Blog frontend page
 
 ## Links
 
--   DockeHub: https://hub.docker.com/repository/docker/kyxie/umami-api/general
+-   DockeHub: [kyxie/umami-api general | Docker Hub](https://hub.docker.com/repository/docker/kyxie/umami-api/general)
+-   GitHub: [GitHub - Kyxie/umami-api](https://github.com/Kyxie/umami-api)
 -   How to use:
-    -   Chinese: https://kyxie.me/zh/blog/tech/web/umami/#%E5%B5%8C%E5%85%A5%E5%88%B0%E5%8D%9A%E5%AE%A2%E5%89%8D%E7%AB%AF
-    -   English: https://kyxie.me/zh/blog/tech/web/umami/#%E5%B5%8C%E5%85%A5%E5%88%B0%E5%8D%9A%E5%AE%A2%E5%89%8D%E7%AB%AF
+    -   Chinese: [使用Docker部署Umami | Kunyang's Blog](https://kyxie.me/zh/blog/tech/web/umami/#嵌入到博客前端)
+    -   English: [使用Docker部署Umami | Kunyang's Blog](https://kyxie.me/zh/blog/tech/web/umami/#嵌入到博客前端)

@@ -1,5 +1,22 @@
 {
+  "name": "umami-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --env-file=.env index.js",
+    "start": "node index.js",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "aws-cdk": "^2.1020.1"
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
   }
 }

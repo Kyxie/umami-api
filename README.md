@@ -4,7 +4,7 @@ A simple proxy for self-hosted [Umami](https://umami.is), built for embedding vi
 
 ## Example
 
-Insert this code on your Blog frontend page
+Insert this code on your Blog frontend page.
 
 ```html
 <script

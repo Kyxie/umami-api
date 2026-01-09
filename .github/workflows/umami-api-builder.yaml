@@ -1,4 +1,4 @@
-name: Build and Push Release
+name: umami-api-builder
 
 on:
   push:
